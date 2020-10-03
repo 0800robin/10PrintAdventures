@@ -1,0 +1,141 @@
+
+/* 
+  Overall styles
+
+  Reading List:
+  - Fonts on the web
+  - Box Model in CSS.
+  - Text align
+  
+*/
+body {
+  background-color: #fafafa;
+  font-family: sans-serif;
+  color: #333;
+  font-weight: normal;
+  margin: 0px;
+}
+
+header {
+  border-bottom: 1px solid lightgray;
+  padding: 24px;
+  background: white;
+  text-align: center;
+}
+
+
+
+footer {
+  text-align: center;
+  border-top: 1px solid lightgray;
+  background: white;
+  padding: 16px 0px;
+}
+
+
+
+
+
+
+/* 
+  styling the container holding the sketch 
+
+  Reading List:
+  - CSS position & display properties.
+  - CSS Grid 
+*/
+
+#sketch-container {
+  display: grid;
+  grid-template-columns: 34fr 13fr;
+  background: #F9F9F9;
+  grid-gap: 16px;
+  padding: 16px;
+}
+
+#sketch-holder {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  min-height: 80vh;
+}
+
+
+
+
+
+/* 
+  Control interface styles. 
+
+  Reading List:
+  - HTML inputs 
+  - Styling forms on the web
+*/
+
+#sketch-controls {
+  padding: 16px;
+  background: white;
+  height: calc(100% - 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#presets {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2px;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+
+#save {
+  width: 100%;
+  height: 64px;
+}
+
+#color-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 16px;
+}
+
+
+button:hover {
+  cursor: pointer;
+}
+
+
+/* 
+  Change the page style on mobile
+
+  Reading List:
+  - Media queries 
+  - Mobile web design
+*/
+
+@media only screen and (max-width: 750px) {
+  #sketch-holder {
+    min-height: 60vh;
+  }
+  #sketch-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 60vh;
+  }
+
+  html {
+    font-size: 75%;
+  }
+
+}
+

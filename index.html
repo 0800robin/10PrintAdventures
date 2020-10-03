@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- load in the p5 library and the styles -->
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
+  <title>Adventures in 10 Print</title>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Adventures in 10 Print</h1>
+    </header>
+    <div id="sketch-container">
+
+
+
+      <!-- our sketch lives here-->
+      <div id="sketch-holder"></div>
+
+
+
+
+
+      <!-- control pane; -->
+      <div id="sketch-controls">
+
+        <!-- preset buttons -->
+        <div id="presets">
+          <button data-preset="tenPrintClassic">10 Print 👾</button>
+          <button data-preset="rain">Rain 🌧</button>
+          <button data-preset="night">Night Sky ✨ </button>
+          <button data-preset="matrix">Matrix 💻</button>
+        </div>
+
+
+        <!-- control sliders-->
+        <div>
+          <h2 class="m-0"><strong>Chance</strong></h2>
+          <span>Probability<input type="range" id="chance" name="chance" min="0.01" max="1" step="0.005" /></span>
+          <span>Direction<input type="range" id="control" name="control" min="0" max="1" step="0.005" /></span>
+          <span>Chaos<input type="range" id="chaos" name="chaos" min="0" max="16" step="0.025" /></span>
+          <br>
+        </div>
+        <div>
+          <h2 class="m-0"><strong>Control</strong></h2>
+          <span>Length<input type="range" id="lineLength" name="lineLength" min="10" max="200" step="0.25" /></span>
+          <span>Width<input type="range" id="lineWeight" name="lineWeight" min="1" max="24" step="0.01" /></span>
+          <div id="color-holder">
+            <span>Background<input type="color" id="backgroundColor" name="backgroundColor" /></span>
+            <span>Line<input type="color" id="lineColor" name="lineColor" /></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>Made with ❤️ by <a href="#" target="_blank">ARTIST NAME</a> in ARTIST LOCATION</p>
+    </footer>
+  </div>
+
+
+  <!-- load in our-->
+  <script src="./art.js"></script>
+</body>
+
+</html>
